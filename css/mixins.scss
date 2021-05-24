@@ -1,0 +1,105 @@
+@mixin logo {
+    font-family: $font-family-roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 37px;
+    color: $dark-red;
+    text-transform: capitalize;
+}
+
+@mixin social-button {
+    color: $white-text;
+    text-decoration: none;
+    background: $black;
+    border-radius: 5px;
+    font-family: 'SF Pro Text';
+}
+
+@mixin social-icon {
+    color: $black;
+    background: $social-color;
+    border-radius: 5px;
+    padding: 12px 15px;
+    font-family: 'SF Pro Text';
+}
+
+@mixin headline-nav {
+    font-family: $font-family-SF;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+@mixin headline {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 41px;
+}
+
+@mixin wrapper {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    align-items: center;
+}
+
+@mixin nav-menu-item {
+    list-style: none;
+    display: inline-block;
+    text-transform: capitalize;
+    font-family: $font-family-SF;
+    border-right: 1px solid $line-grey;
+}
+
+@mixin headline-article {
+    font-family: $font-family-SF;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130%;
+    color: $black;
+}
+
+@mixin description-and-date {
+    font-family: $font-family-SF;
+    font-style: normal;
+    font-weight: normal;
+}
+
+@mixin description {
+    @include description-and-date;
+    font-size: 16px;
+    line-height: 150%;
+}
+
+@mixin date {
+    @include description-and-date;
+    font-size: 14px;
+}
+
+@mixin link-see-more {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    text-decoration: none;
+    color: $black;
+}
+
+@mixin sticker-link {
+    font-family: 'SF Pro Text';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 19px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $black;
+    background-color: $white-text;
+}

@@ -1,0 +1,85 @@
+.sex-line {
+  height: 4px;
+  background-color: #D24545;
+  border-radius: 5px;
+  margin-bottom: 7px;
+}
+
+.sex-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+.sex-headline {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.sex-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sex-list-item {
+  padding: 0 20px;
+  width: 100%;
+}
+
+.sex-list-item-image {
+  margin-bottom: 15px;
+}
+
+.sex-list-item-image img {
+  width: 100%;
+}
+
+.sex-list-item-content-headline {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+  color: #000000;
+  margin-bottom: 15px;
+}
+
+.sex-list-item-content-author {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.sex-list-item:last-child {
+  padding-right: 0;
+}
+
+.sex-list-item:first-child {
+  padding-left: 0;
+}
+
+@media (max-width: 576px) {
+  .sex-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .sex-list-item {
+    padding: 0 10px;
+  }
+  .sex-list-item:last-child {
+    padding-right: 10px;
+  }
+  .sex-list-item:first-child {
+    padding-left: 10px;
+  }
+}
+/*# sourceMappingURL=sex.css.map */

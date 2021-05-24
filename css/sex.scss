@@ -1,0 +1,78 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+.sex {
+
+    &-line {
+        height: 4px;
+        background-color: $light-red;
+        border-radius: 5px;
+        margin-bottom: 7px;
+    }
+    &-wrapper {
+        max-width: 1200px;
+        margin: auto;
+        padding-bottom:50px;
+    }
+
+    &-headline {
+        @include headline-nav;
+        margin-bottom: 25px;
+    }
+
+    &-list {
+        display: flex;
+        justify-content: space-between;
+
+        &-item {
+            padding: 0 20px;
+            width: 100%;
+
+            &-image {
+                margin-bottom: 15px;
+                img {
+                    width: 100%;
+                }
+            }
+
+            &-content {
+                &-headline {
+                    @include headline-article;
+                    margin-bottom: 15px;
+                }
+
+                &-author {
+                    @include date;
+                }
+            }
+        }
+
+        &-item:last-child {
+            padding-right: 0;
+        }
+
+        &-item:first-child {
+            padding-left: 0;
+        }
+    }
+}
+
+@media(max-width:576px) {
+    .sex {
+        &-list {
+            flex-wrap: wrap;
+
+            &-item {
+                padding: 0 10px;
+            }
+
+            &-item:last-child {
+                padding-right: 10px;
+            }
+
+            &-item:first-child {
+                padding-left: 10px;
+            }
+        }
+    }
+}

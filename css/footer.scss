@@ -1,0 +1,80 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+.footer {
+    background-color: $bg-footer;
+    padding: 40px 0px;
+
+    &-wrapper {
+        @include wrapper;
+        flex-wrap: wrap;
+    }
+
+    &-social {
+        display: flex;
+        align-items: center;
+
+        &-project {
+            margin-right: 20px;
+            color: $white-text;
+            font-family: $font-family-SF;
+        }
+
+        &-icon {
+            @include social-icon;
+            margin: 0 3px;
+        }
+
+        &-icon:last-child {
+            margin-right: 0px;
+        }
+    }
+
+    &-logo {
+        display: inline-block;
+        padding: 22px 28px;
+        background: $red;
+        border-radius: 50%;
+        font-family: $font-family-SF;
+        font-size: 20px;
+        color: $white-text;
+    }
+
+    &-navigation-menu {
+        margin: 0;
+        padding: 0;
+
+        &-item {
+            @include nav-menu-item;
+            color: $white-text;
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+
+        &-item:last-child {
+            border: 0;
+        }
+    }
+}
+
+@media(max-width:1024px) {
+
+    .footer {
+
+        &-wrapper {
+            justify-content: center;
+        }
+
+        &-navigation-menu {
+            text-align: center;
+
+            &-item {
+                margin-bottom: 20px;
+            }
+        }
+
+        &-social {
+            margin-top: 20px;
+        }
+    }
+}

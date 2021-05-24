@@ -1,0 +1,192 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+.header {
+    &-preheader {
+        padding: 12px 0px 15px 0px;
+        border-bottom: 1px solid $line-grey;
+
+        &-wrapper {
+            @include wrapper;
+        }
+
+        &-logo {
+            @include logo;
+        }
+
+
+
+        &-social-icon {
+            @include social-icon;
+            margin: 0 3px
+        }
+
+        &-social-button {
+            @include social-button;
+            padding: 11px 15px;
+            margin-left: 3px;
+        }
+    }
+
+    &-top {
+        border-bottom: 1px solid $line-grey;
+        height: 47px;
+
+        &-wrapper {
+            @include wrapper;
+        }
+
+        &-mobile-navigation-menu {
+            display: none;
+        }
+
+        &-navigation-menu {
+            padding: 0;
+
+            &-item {
+                @include nav-menu-item;
+                padding-right: 20px;
+                padding-left: 20px;
+
+                a {
+                    color: $black;
+                    text-decoration: none;
+                }
+
+                a:hover {
+                    font-weight: 800;
+                }
+
+            }
+
+            &-item:first-child {
+                padding-left: 0;
+            }
+
+            &-item:last-child {
+                border-right: 0px;
+            }
+        }
+
+        &-additional-weather {
+            display: inline-block;
+            padding-right: 25px;
+            border-right: 1px solid $line-grey;
+            font-family: $font-family-SF;
+
+            .fa-cloud {
+                margin-right: 10px;
+                color: $cloud-color;
+            }
+        }
+
+        &-additional-search {
+            display: inline-block;
+            padding-left: 25px;
+        }
+    }
+
+
+}
+
+@media(max-width: 991px) {
+    .header {
+
+        &-preheader {
+            padding: 12px 10px 15px 10px;
+        }
+
+        &-top {
+            padding-left: 10px;
+            padding-right: 10px;
+
+            &-navigation-menu {
+                padding: 0;
+
+                &-item {
+                    list-style: none;
+                    display: inline-block;
+                    border-right: 1px solid $line-grey;
+                    padding-right: 10px;
+                    padding-left: 10px;
+                    text-transform: capitalize;
+                    font-family: 'SF Pro Text';
+                }
+
+                &-item:first-child {
+                    padding-left: 0px;
+                }
+
+                &-item:last-child {
+                    border-right: 0px;
+                }
+            }
+
+            &-additional-weather {
+                display: inline-block;
+                padding-right: 20px;
+                border-right: 1px solid $line-grey;
+
+                .fa-cloud {
+                    margin-right: 10px;
+                    color: $cloud-color;
+                }
+            }
+
+            &-additional-search {
+                display: inline-block;
+                padding-left: 20px;
+            }
+
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .header {
+        &-preheader {
+            &-social-button {
+                display: none;
+            }
+        }
+
+        &-top {
+            position: relative;
+
+            &-wrapper {
+                line-height: 47px;
+            }
+
+            &-mobile-navigation-menu {
+                display: block;
+            }
+
+            &-navigation-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                border: 1px solid $line-grey;
+                margin: 0;
+                z-index: 1;
+                background: $dark-grey;
+                color: $white-text;
+
+                &-item {
+                    display: block;
+                    border: 0px;
+                    padding: 5px 10px;
+                    border-top: 1px solid $line-grey;
+
+                }
+
+                &-item:first-child {
+                    padding: 5px 10px;
+                    border-top: 0px;
+                }
+            }
+
+
+        }
+
+    }
+}

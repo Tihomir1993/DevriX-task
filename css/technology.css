@@ -1,0 +1,155 @@
+.technology-line {
+  height: 4px;
+  background-color: #D24545;
+  border-radius: 5px;
+  margin-bottom: 7px;
+}
+
+.technology-wrapper {
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: block;
+  padding-bottom: 50px;
+}
+
+.technology-headline {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.technology-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.technology-list-wrapper-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.technology-list-wrapper-item {
+  padding: 0 0 40px 40px;
+}
+
+.technology-list-wrapper-item-headline {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+  color: #000000;
+  margin-bottom: 15px;
+  max-width: 260px;
+}
+
+.technology-list-wrapper-item-date {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.technology-list-item-opened-image img {
+  width: 100%;
+}
+
+.technology-list-item-opened-headline {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.technology-list-item-opened-author {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.technology-list-item-opened-description {
+  font-family: "SF Pro Text";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  margin-bottom: 37px;
+}
+
+.technology-list-item-opened-continue {
+  font-family: 'SF Pro Text';
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration: none;
+  color: #000000;
+  display: block;
+  text-align: left;
+}
+
+.technology-list-item-opened-continue .fa-arrow-right {
+  margin-left: 8px;
+}
+
+@media (max-width: 991px) {
+  .technology-list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .technology-list-wrapper-flex {
+    text-align: center;
+  }
+  .technology-list-wrapper-item {
+    width: 100%;
+  }
+  .technology-list-wrapper-item-headline {
+    max-width: none;
+  }
+  .technology-list-wrapper-item-content {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 660px) {
+  .technology-list-wrapper-item {
+    padding: 0;
+  }
+  .technology-list-wrapper-item-image img {
+    width: 100%;
+  }
+  .technology-list-wrapper-item-image-content {
+    padding: 0 10px;
+  }
+  .technology-list-wrapper-flex {
+    text-align: left;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .technology-list-item-opened-headline, .technology-list-item-opened-description, .technology-list-item-opened-author, .technology-list-item-opened-continue {
+    padding: 0 10px;
+  }
+}
+/*# sourceMappingURL=technology.css.map */

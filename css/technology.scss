@@ -1,0 +1,140 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+.technology {
+    &-line {
+        height: 4px;
+        background-color: $light-red;
+        border-radius: 5px;
+        margin-bottom: 7px;
+    }
+    &-wrapper {
+        @include wrapper;
+        display: block;
+        padding-bottom:50px;
+    }
+
+    &-headline {
+        @include headline-nav;
+        margin-bottom: 25px;
+    }
+
+    &-list {
+        display: flex;
+
+        &-wrapper {
+            &-flex {
+                display: flex;
+            }
+
+            &-item {
+                padding: 0 0 40px 40px;
+
+
+                &-headline {
+                    @include headline-article;
+                    margin-bottom: 15px;
+                    max-width: 260px;
+                }
+
+                &-date {
+                    @include date;
+                }
+
+
+            }
+        }
+
+        &-item-opened {
+
+            &-image {
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            &-headline {
+                @include headline-article;
+                margin-bottom: 12px;
+            }
+
+            &-author {
+                @include date;
+                margin-bottom: 12px
+            }
+
+            &-description {
+                @include description;
+                margin-bottom: 37px;
+            }
+
+            &-continue {
+                @include link-see-more;
+                display: block;
+                text-align: left;
+
+                .fa-arrow-right {
+                    margin-left: 8px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:991px) {
+    .technology {
+        &-list {
+            justify-content: center;
+            flex-wrap: wrap;
+
+            &-wrapper {
+                &-flex {
+                    text-align: center;
+                }
+
+                &-item {
+                    width: 100%;
+                    
+                    &-headline {
+                        max-width: none;
+                    }
+
+                    &-content {
+                        padding: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width:660px) {
+    .technology {
+        &-list {
+            &-wrapper {
+            &-item {
+                padding: 0;
+                &-image {
+                    img {
+                        width: 100%;
+                    }
+                    &-content {
+                        padding: 0 10px;
+                    }
+                }
+              
+            }
+                &-flex {
+                    text-align: left;
+                    flex-wrap: wrap
+                }
+            }
+            &-item-opened {
+                &-headline, &-description, &-author, &-continue {
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}
